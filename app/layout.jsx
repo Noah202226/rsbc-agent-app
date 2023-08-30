@@ -1,5 +1,3 @@
-"use client";
-
 import { Container } from "@mui/material";
 import Footer from "./components/Root/Footer";
 import Navbar from "./components/Root/Navbar";
