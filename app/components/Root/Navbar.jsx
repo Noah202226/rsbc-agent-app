@@ -1,3 +1,4 @@
+"use client";
 import { UserAuth } from "@/app/context/AuthContext";
 import { Button, Stack, Typography } from "@mui/material";
 import Link from "next/link";
