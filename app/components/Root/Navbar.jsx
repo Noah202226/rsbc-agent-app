@@ -27,7 +27,11 @@ export default function Navbar() {
 
   useEffect(() => {
     const checkAuth = async () => {
-      if (getAuth().currentUser != null) setLoading(false);
+      if (getAuth().currentUser != null) {
+        setLoading(false);
+      } else {
+        setLoading(false);
+      }
     };
 
     checkAuth();
