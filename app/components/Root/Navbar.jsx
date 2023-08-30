@@ -27,11 +27,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const checkAuth = async () => {
-      if (getAuth().currentUser != null) {
-        setLoading(false);
-      } else {
-        setLoading(false);
-      }
+      await new Promise((resolve) => setTimeout(resolve, 50));
+      setLoading(false);
     };
 
     checkAuth();
@@ -48,9 +45,7 @@ export default function Navbar() {
           <h1>RSBC AGENT APP</h1>
         </Link>
 
-        {loading ? (
-          <p>Loading ...</p>
-        ) : !user ? (
+        {!user ? (
           <ul
             style={{
               listStyle: "none",
