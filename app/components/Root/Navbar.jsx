@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <nav>
       <Stack
-        flexDirection={"row"}
+        flexDirection={{ xs: "column", md: "row" }}
         alignItems={"center"}
         justifyContent={"space-between"}
         py={2}
@@ -65,7 +65,7 @@ export default function Navbar() {
         ) : (
           <div>
             <Typography variant="body" mx={2}>
-              Welcome, {user?.displayName}
+              Welcome, {user?.uid}
             </Typography>
             <Button size="small" variant="contained" onClick={handleLogout}>
               Logout
